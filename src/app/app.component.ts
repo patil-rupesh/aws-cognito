@@ -12,15 +12,16 @@ export class AppComponent implements OnInit {
   isAuthenticated = false;
 
   constructor(private authService: AuthService,
-              private router: Router) {
+    private router: Router) {
   }
 
   ngOnInit() {
     this.authService.authStatusChanged.subscribe(
-      (authenticated) => {
+      (authenticated) => {  
+        
         this.isAuthenticated = authenticated;
         if (authenticated) {
-          this.router.navigate(['/compare']);
+          this.router.navigate(['/user-details']);
         } else {
           this.router.navigate(['/']);
         }

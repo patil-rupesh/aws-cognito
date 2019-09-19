@@ -90,7 +90,7 @@ export class AuthService {
     const cognitoUser = new CognitoUser(userData);
     const that = this;
     cognitoUser.authenticateUser(authDetails, {
-      onSuccess (result: CognitoUserSession) {
+      onSuccess(result: CognitoUserSession) {
         that.authStatusChanged.next(true);
         that.authDidFail.next(false);
         that.authIsLoading.next(false);

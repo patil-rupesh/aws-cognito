@@ -5,10 +5,12 @@ import { SigninComponent } from './user/signin/signin.component';
 import { SignupComponent } from './user/signup/signup.component';
 
 import { AuthGuard } from './user/auth-guard.service';
+import { UserDetailsComponent } from './user/user-details.component';
 
 const routes: Routes = [
   { path: '', component: SigninComponent },
-  { path: 'signup', component: SignupComponent }
+  { path: 'signup', component: SignupComponent },
+  { path: 'user-details', component: UserDetailsComponent }
 ];
 
 @NgModule({
@@ -16,4 +18,4 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: [AuthGuard]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

@@ -35,7 +35,7 @@ export class SignupComponent implements OnInit {
   onDoConfirm() {
     this.confirmUser = true;
   }
-
+  
   onConfirm(formValue: { usrName: string, validationCode: string }) {
     this.authService.confirmUser(formValue.usrName, formValue.validationCode);
   }
