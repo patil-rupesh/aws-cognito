@@ -8,7 +8,6 @@ import { SignupComponent } from './user/signup/signup.component';
 import { SigninComponent } from './user/signin/signin.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthService } from './user/auth.service';
-import { UserDetailsComponent } from './user/user-details.component';
 
 
 @NgModule({
@@ -16,7 +15,6 @@ import { UserDetailsComponent } from './user/user-details.component';
     AppComponent,
     SignupComponent,
     SigninComponent,
-    UserDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -16,21 +16,21 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.authService.authStatusChanged.subscribe(
-      (authenticated) => {  
-        
-        this.isAuthenticated = authenticated;
-        if (authenticated) {
-          this.router.navigate(['/user-details']);
-        } else {
-          this.router.navigate(['/']);
-        }
-      }
-    );
-    this.authService.initAuth();
+    // this.authService.authStatusChanged.subscribe(
+    //   (authenticated) => {
+
+    //     this.isAuthenticated = authenticated;
+    //     if (authenticated) {
+    //       this.router.navigate(['/user-details']);
+    //     } else {
+    //       this.router.navigate(['/']);
+    //     }
+    //   }
+    // );
+    // this.authService.initAuth();
   }
 
   onLogout() {
-    this.authService.logout();
+
   }
 }
